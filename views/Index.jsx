@@ -7,8 +7,7 @@ export default function Index( { pokemon }) {
         <ul>
             {pokemon.map((pokemon, i) =>
             {return (
-                <li>
-                       The{' '}
+                <li key={i}>
                             <a href={`/pokemon/${i}`}>
                                 {pokemon.name}
                             </a>

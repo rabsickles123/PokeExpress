@@ -5,7 +5,7 @@ export default function Show({pokemon}) {
         <div>
             <h1>Here's your pokemon!</h1>
             {pokemon.name} <br></br>
-            {pokemon.img}
+            <img src= {pokemon.img}/>
         </div>
     )
 }
