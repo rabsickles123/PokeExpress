@@ -4,7 +4,12 @@ const PORT = 5000
 
 const app = express()
 
+const jsxEngine = require('jsx-view-engine')
+
 const pokemon = require('./models/pokemon')
+
+app.set('view engine', 'jsx');
+app.engine('jsx', jsxEngine());
 
 app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`)
@@ -15,5 +20,5 @@ app.get('/', (req, res) => {
 })
 
 app.get('/pokemon', (req, res) => {
-    res.send(pokemon);
+    res.render('Index');
 })
